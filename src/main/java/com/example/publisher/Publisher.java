@@ -21,6 +21,6 @@ public class Publisher {
     @PostMapping("/publish")
     public String publish(@RequestBody Product product) {
         template.convertAndSend(topic.getTopic(), product.toString());
-        return "Event published";
+        return "Event published!!";
     }
 }
